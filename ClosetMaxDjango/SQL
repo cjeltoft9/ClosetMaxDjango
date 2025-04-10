@@ -1,0 +1,24 @@
+ALTER TABLE Clothes MODIFY COLUMN brand VARCHAR(255);
+
+
+
+--@block
+DESCRIBE Clothes;
+SELECT * FROM Users;
+SELECT * from Clothes;
+
+
+--@block
+ALTER TABLE Clothes
+    CHANGE COLUMN `Material` `material` VARCHAR(255), -- Rename Material to material
+    MODIFY category_id BIGINT NULL, -- Allow NULL values
+    MODIFY color_id BIGINT NULL,
+    MODIFY brand VARCHAR(255) NULL,
+    MODIFY season BIGINT NULL,
+    MODIFY favorite BIGINT NULL,
+    MODIFY date_added DATETIME NULL;
+
+
+--@block
+ALTER TABLE Users
+ADD COLUMN password VARCHAR(255) NULL;
